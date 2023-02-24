@@ -1,0 +1,30 @@
+﻿@model PersonModel
+@{
+    ViewData["Title"] = "Guardar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Crear Persona
+    </div>
+    <div class="card-body">
+        <form asp-action="Guardar" asp-controller="Persona" method="post">
+            <div class="mb-3">
+                <label  class="form-label">Nombres</label>
+                <input asp-for="first_name" type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Apellidos</label>
+                <input asp-for="last_name" type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Apellidos</label>
+                <input asp-for="gender" type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Listar" asp-controller="Persona" class="btn btn-warning">Volver a lista</a>
+        </form>
+    </div>
+</div>
+
